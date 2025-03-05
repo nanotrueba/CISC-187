@@ -1,5 +1,5 @@
 ## 1. Assume you have a simple single-dimensional array. array = [200, 400, 100, 50, 350]; Linear search will take O(N). Write a code in C++/Python to improve the search operation efficiency from O(N)to O(1).
-```
+```python
 # 'fromkeys' creates a dictionary in which the elements in array
 # are the keys. Pass 'array' as a parameter to assign our array
 # to the keys of the hash map.
