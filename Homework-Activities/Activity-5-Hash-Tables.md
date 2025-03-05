@@ -7,6 +7,7 @@ hashed = dict.fromkeys(array)
 
 # The following line will return True for any
 # number that is in 'array'
+
 print(200 in hashed)
 # True
 ```
