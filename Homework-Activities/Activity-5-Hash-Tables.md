@@ -34,3 +34,13 @@ int main() {
 Result is 69300245310556.
 
 ## 3. With the help of a figure, explain the problem that occured due to introducing a tombstone to mark the deleted cell.
+A tombstone takes the place in a hash table where there was a key-value pair before. When too many tombstones begin to fill the hash table, it can negatively affect the performance of the hash table.
+Hash table: E-empty T-tombstone I-in use
+E E I I E E I E I
+If I were to delete the first in-use space, the hash table would look like this:
+E E T I E E I E I
+Now, instead of being empty, the previously 'in-use' space is now filled by a Tombstone. If we delete another,
+E E T I E E I E T
+Now there are 2 Tombstones. If a hash table becomes too filled with Tombstones, it will negatively affect the hash table's performance
+because there aren't Empty slots, the Tombstones sact differently and can complicate the hashing function. Such complications could be 
+false positives, incomplete searches and other slowing of performance.
