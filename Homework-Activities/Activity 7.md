@@ -25,7 +25,7 @@ public:
 
     void deletingNode() {
         if (!head) {
-            cout << "List is empty. Nothing to delete." << endl;
+            cout << "List is empty." << endl;
             return;
         }
         Node* temp = head;
@@ -43,7 +43,7 @@ public:
             cout << temp->datapoint << " ----> ";
             temp = temp->next;
         }
-        cout << "NULL" << endl;
+        cout << "Null" << endl;
     }
 
     ~LinkedList() {
