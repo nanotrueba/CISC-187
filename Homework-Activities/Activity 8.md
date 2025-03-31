@@ -5,25 +5,23 @@
 log (base 2) (1000) = 9.97 which is 10 steps.
 # 3. Write an algorithm that finds the greatest value within a binary tree.
 ```py
-class TreeNode:
+class Tree_Node:
     def __init__(self, value=0, left=None, right=None):
         self.value = value
         self.left = left
         self.right = right
 
 def find_max(root):
-    # Traverse to the rightmost node
     while root and root.right:
         root = root.right
     return root.value if root else None
 
-# Example Usage
-root = TreeNode(10)
-root.left = TreeNode(5)
-root.right = TreeNode(15)
-root.right.right = TreeNode(20)
+root = Tree_Node(10)
+root.left = Tree_Node(1)
+root.right = Tree_Node(2)
+root.right.right = Tree_Node(3)
 
-print("Greatest value:", find_max(root))  # Output will be 20
+print("Greatest value:", find_max(root))  
 
 ```
 # 4. Write code in C++ that implements the task from #1. Only insertion operations are required.
@@ -31,23 +29,19 @@ print("Greatest value:", find_max(root))  # Output will be 20
 #include <iostream>
 using namespace std;
 
-// Definition of a TreeNode
-struct TreeNode {
-    int value;
-    TreeNode* left;
-    TreeNode* right;
+class Tree_Node {
+    int val;
+    Tree_Node* left;
+    Tree_Node* right;
 
-    TreeNode(int x) : value(x), left(nullptr), right(nullptr) {}
+    Tree_Node(int x) : val(x), left(nullptr), right(nullptr) {}
 };
 
-// Function to insert a new value into the BST
-TreeNode* insert(TreeNode* root, int value) {
-    // If the tree is empty, return a new node
+Tree_Node* insert(Tree_Node* root, int val) {
     if (root == nullptr) {
-        return new TreeNode(value);
+        return new Tree_Node(val);
     }
 
-    // Otherwise, recur down the tree
-    if (value < root->value) {
-        root->left = insert(root->left, value);
+    if (val < root->val) {
+        root->left = insert(root->left, val);
 ```
