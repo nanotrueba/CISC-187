@@ -16,8 +16,8 @@ def find_max(root):
         root = root.right
     return root.value if root else None
 
-root = Tree_Node(1)
-root.left = Tree_Node(2)
+root = Tree_Node(2)
+root.left = Tree_Node(1)
 root.right = Tree_Node(4)
 root.right.right = Tree_Node(6)
 
