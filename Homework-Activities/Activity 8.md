@@ -16,10 +16,10 @@ def find_max(root):
         root = root.right
     return root.value if root else None
 
-root = Tree_Node(10)
-root.left = Tree_Node(1)
-root.right = Tree_Node(2)
-root.right.right = Tree_Node(3)
+root = Tree_Node(1)
+root.left = Tree_Node(2)
+root.right = Tree_Node(4)
+root.right.right = Tree_Node(6)
 
 print("Greatest value:", find_max(root))  
 
