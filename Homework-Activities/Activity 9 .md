@@ -1,4 +1,5 @@
 # 1. Draw what the following heap would look like after we insert the value 11 into it.
+![IMG_0694](https://github.com/user-attachments/assets/5cb4d5b7-93e5-4e0a-be56-f725ae1fe5c6)
 
 # 2. Draw what the previous heap would look like after we delete the root node.
 
