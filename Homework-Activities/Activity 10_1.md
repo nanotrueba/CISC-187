@@ -1,7 +1,6 @@
 # Objective: "Implement Breadth-first search and Depth-first search algorithms in C++"
 ### 1. Create a theoretical graph using a pen and paper OR electronically.
-![JPEG image-4BD1-8C52-29-0](https://github.com/user-attachments/assets/5d4b7ab2-5747-47a1-87e9-10a73a399a62)
-
+![JPEG image-4213-A20A-97-0](https://github.com/user-attachments/assets/f0dfab10-9dad-40d7-a5e6-fa93250849bd)
 ### 2. Implement the graph created in step 1 and apply breadth and depth-first search algorithms using C++.
 
 ### 3. Compare both search algorithms in the context of Big O notations.
