@@ -44,14 +44,14 @@ def dijkstras_algo(graph, source):
 
     return path_length
 
-graph1 = {
+sample_graph = {
     'A': [('B', 1), ('C', 5)],
     'B': [('D', 1)],
     'C': [('D', -10)],
     'D': []
 }
 
-result = dijkstras_algo(graph1, 'A')
+result = dijkstras_algo(sample_graph, 'A')
 for node, dist in result.items():
     print(node, dist)
     ```
