@@ -6,6 +6,12 @@ Dijkstra's algorithm fails on negative weights due to the "greedy principle" whi
 For example, if Dijkstra reaches a node through a path made up of all positive nodes and finalizes it's "shortest path", it could possibly miss a shorter path that used negative weights. This means that Dijkstra's fails with negative weights because it will falsely deem a path as the "shortest" while a shorter path exist.
 
 #### Example (code):
+Our code gives us the output:
+"A 0
+B 1
+C 5
+D 3"
+But this isn't the actual shortest path to node D because Dijkstra incorrectly finalized it's answer before seeing the negative weight. If we wanted our actual shortest path to D from our source it would be -5. Because 5 - 10 = -5. The part of our function that doesn't handle negative weights are the lines " if current_node in visited: continue". This is the "greedy" principle of the algo because it assumes that once it's removed a node from the priority queue that it has "finalized" the shortest path to the node and will not "revisit" it.
 ```py
 # necessary import for heap fucntions in python
 import heapq
