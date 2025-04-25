@@ -30,7 +30,7 @@ public:
     // bfs algo implemented using pseudocode and logic from the lecture
     void bfs(char start) {
         vector<bool> visited(nodes.size(), false);
-        queue<char> q;
+        queue<char> q; //queue is unique to bfs
 
         visited[indexOf(start)] = true;
         q.push(start);
@@ -55,7 +55,7 @@ public:
     // dfs algo implemented using pseudocode and logic from the lecture
     void dfs(char start) {
         vector<bool> visited(nodes.size(), false);
-        stack<char> s;
+        stack<char> s; //stack is used for dfs
 
         s.push(start); //push start node to stack
 
