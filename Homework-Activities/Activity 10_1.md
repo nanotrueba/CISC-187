@@ -57,7 +57,7 @@ public:
         vector<bool> visited(nodes.size(), false);
         stack<char> s;
 
-        s.push(start);
+        s.push(start); //push start node to stack
 
         cout << "DFS: ";
         while (!s.empty()) {
@@ -66,7 +66,7 @@ public:
 
             int idx = indexOf(curr);
             if (!visited[idx]) {
-                visited[idx] = true;
+                visited[idx] = true; 
                 cout << curr << " ";
 
                 for (char neighbor : graph[idx]) {
@@ -99,7 +99,6 @@ int main() {
     g.add('D');
     g.add('E');
     g.add('F');
-
     g.add('A', 'B');
     g.add('A', 'C');
     g.add('B', 'D');
