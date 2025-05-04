@@ -43,3 +43,15 @@ array=[ 1,
         ], 33 
       ]
 Write a recursive function that prints all the numbers (and just numbers).
+
+def print_numbers(arr):
+    for i in arr:
+    # handle lists
+        if type(i) == list:
+        # recursive line that calls itself 
+            print_numbers(i)
+    # handle numbers
+        else:
+            print(i)
+
+This code takes in an array and recursively uses print_numbers to print numbers within a list when there is a list, and print numbers when there is no list. This is a simple code that handles for lists and numbers and prints out just the numbers.
