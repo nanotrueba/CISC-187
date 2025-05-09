@@ -12,7 +12,7 @@ function wordBuilder(array) {
 		return collection; 
 }
 ```
-The 'Word Builder' algorithm has a space complexity of 
+The 'Word Builder' algorithm has a space complexity of O(N^2). We see the above algorithm uses a nested loop to generate all possible pairs of an input array and stores it in "collection". Because it pushes array[i] and arra[j], this makes the resulting space complexity to O(N^2). Then there is the condition "if (i !== j)" which skips the inner loop whenever i is equal to j. This subtracts N from our N^2 terms because we skip any i that are equal to j. In final, the space complexity simplifies to O(N^2).
 
 ### 2. Following is a function that reverses an array. Describe its space complexity in terms of Big O:
 ```
@@ -24,7 +24,8 @@ function reverse(array) {
 		return newArray;
 }
 ```
-The function above has a space complexity of 
+The function above has a space complexity of O(N). This is because the function begins by initializing an emtpy array called newArray and iterating through the input array once from the end to the front. During each iteration it pushes one character from the input array to the array called newArray. When each element is copied from the input array into newArray, the space required grows with the size of the input. In the end the space complexity results to O(N).
+
 ### 3. Create a new function to reverse an array that takes up just O(1) extra space.
 ```
 code here
