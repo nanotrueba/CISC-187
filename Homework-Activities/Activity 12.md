@@ -49,30 +49,18 @@ Now our function doesn't create a new array which keeps our space complexity at 
 
 ### 4. Following are three different implementations of a function that accepts an array of numbers and returns an array containing those numbers multiplied by 2. For example, if the input is [5, 4, 3, 2, 1], the output will be [10, 8, 6, 4, 2].
 ```
-function doubleArray1(array) { 
-	let newArray = [];
+def reverse(array):
+    left = 0
+    right = len(array) - 1
+# do until pointers meet
+    while left < right:
+        # swapping logic
+        array[left], array[right] = array[right], array[left]
+	# move pointers along
+        left += 1
+        right -= 1
 
-	for(let i = 0; i < array.length; i++) { 
-		newArray.push(array[i] * 2);
-	}
-	return newArray; 
-}
-
-
-function doubleArray2(array) {
-	for(let i = 0; i < array.length; i++) {
-  	array[i] *= 2;
-  }
-	return array; 
-}
-
-
-function doubleArray3(array, index=0) { 
-	if (index >= array.length) { return; }
-  array[index] *= 2;
-  doubleArray3(array, index + 1);
-	return array; 
-}
+    return array
 ```
 Fill in the table that follows to describe the efficiency of these three versions in terms of both time and space:
 ```
