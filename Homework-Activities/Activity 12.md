@@ -76,8 +76,8 @@ function doubleArray3(array, index=0) {
 ```
 Fill in the table that follows to describe the efficiency of these three versions in terms of both time and space:
 ```
- Version	      Time complexity	      Space complexity
-Version #1	          O(N)	                   O(N)
-Version #2	          O(N)	                   O(1)
-Version #3	          O(N)	                   O(N)
+ Version       Time complexity	    Space complexity
+Version #1	    O(N)	          O(N)
+Version #2	    O(N)	          O(1)
+Version #3	    O(N)	          O(N)
 ```
