@@ -24,12 +24,12 @@ function reverse(array) {
 		return newArray;
 }
 ```
-The function above has a space complexity of O(N). This is because the function begins by initializing an emtpy array called newArray and iterating through the input array once from the end to the front. During each iteration it pushes one character from the input array to the array called newArray. When each element is copied from the input array into newArray, the space required grows with the size of the input. In the end the space complexity results to O(N).
+The function above has a space complexity of O(N). This is because the function begins by initializing an emtpy array called newArray and iterating through the input array once from the end to the front. During each iteration it pushes one character from the input array to the array called newArray. When each element is copied from the input array into newArray, the space required grows according to the size of the input. In the end the space complexity results to O(N).
 
 ### 3. Create a new function to reverse an array that takes up just O(1) extra space.
 If we want to reverse an array that takes up O(1) space, we need to reverse the array in place rather than using a new array to store our modified array. We need pointers to control the left and right pointers of the array while swapping the left and right elemtns in each iteration.
 ```
-function reverse(array) {
+def function reverse(array) {
 // initialize pointers
     let left = 0;
     let right = array.length - 1;
@@ -45,7 +45,7 @@ function reverse(array) {
     return array;
 }
 ```
-Now our function doesn't create a new array which keeps our space complexity at O(N).
+Now our function doesn't create a new array which keeps our space complexity at O(1).
 
 ### 4. Following are three different implementations of a function that accepts an array of numbers and returns an array containing those numbers multiplied by 2. For example, if the input is [5, 4, 3, 2, 1], the output will be [10, 8, 6, 4, 2].
 ```
