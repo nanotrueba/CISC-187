@@ -65,7 +65,34 @@ int main() {
 }
 ```
 ### Task 3
+```cpp
+#include <iostream>
+#include <vector>
+#include <climits>
+using namespace std;
 
+int maxProfit(const vector<int>& prices) {
+    int minPrice = INT_MAX; // initializes minPrice at max so that any lower wins over
+    int maxProfit = 0;
+
+    for (int x : prices) {
+        if (x < minPrice) { // find cheapest price to buy
+            minPrice = x;
+        }
+        int profit = x - minPrice; //calculate profit
+        if (profit > maxProfit) {
+            maxProfit = profit; // update whenever profit can be maximized
+        }
+    }
+    return maxProfit;
+}
+
+int main() {
+    vector<int> stock1 = {10, 7, 5, 8, 11, 2, 6};
+    cout << "Max profit: " << maxProfit(stock1);
+    return 0;
+}
+```
 ### Task 4
 
 ### Task 5
