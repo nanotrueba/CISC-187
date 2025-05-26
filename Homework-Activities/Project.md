@@ -161,3 +161,37 @@ int main() {
 }
 ```
 ### Task 6
+```cpp
+#include <iostream>
+#include <vector>
+#include <unordered_set>
+using namespace std;
+
+int longestConsecutiveValue(vector<int>& nums) { //takes a vector of ints and returns one num for the length of longest consecutive list
+    unordered_set<int> set(nums.begin(), nums.end());
+    int maxLen = 0;
+
+    for (int x : nums) {
+        if (!set.count(x - 1)) { // ensures that we start from the beginning of sequences
+            int current = x; // beginning num
+            int length = 1;
+
+            while (set.count(current + 1)) { // incrementing if possible
+                current++;
+                length++;
+            }
+
+            if (length > maxLen) {
+                maxLen = length;
+            }
+        }
+    }
+    return maxLen;
+}
+
+int main() {
+    vector<int> set1 = {10, 5, 12, 3, 55, 30, 4, 11, 2};
+    cout << longestConsecutiveValue(set1) << endl;
+    return 0;
+}
+```
