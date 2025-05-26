@@ -129,5 +129,35 @@ int main() {
 ```
 
 ### Task 5
+```cpp
+#include <iostream>
+#include <vector>
+using namespace std;
 
+vector<float> sortTemp(vector<float>& temps) { //accepts a vector of temp floats and returns the sorted vector
+    int counts[21] = {0};
+    vector<float> result;
+
+    for (float x : temps) {
+        counts[int((x - 97.0) * 10)]++; //calculate the index of each temp using the formula
+    }
+
+    for (int i = 0; i < 21; i++) {
+        for (int j = 0; j < counts[i]; j++) {
+            result.push_back(97.0 + i * 0.1); // push actual temperature for each index to the final vector 
+        }
+    }
+    return result;
+}
+
+int main() {
+    vector<float> temps = {98.6, 98.0, 97.1, 99.0, 98.9, 97.8, 98.5, 98.2, 98.0, 97.1};
+    vector<float> sorted = sortTemp(temps);
+
+    for (float x : sorted) {
+        cout << x << " ";
+    }
+    cout << endl;
+}
+```
 ### Task 6
