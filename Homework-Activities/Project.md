@@ -40,6 +40,30 @@ int main() {
 ```
 ### Task 2
 
+```cpp
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int findMissing(const vector<int>& nums) {
+    int n = nums.size();
+    int expected_sum = (n * (n + 1)) / 2; // this is a mathematical property of numbers from 0 to n
+    int actual = 0;
+    for (int x : nums) {
+        actual += x; // update actual as each num is read
+    }
+    return expected_sum - actual; // returns skipped number from the set of nums
+}
+
+int main() {
+    vector<int> set1 = {2, 3, 0, 6, 1, 5};
+    vector<int> set2 = {8, 2, 3, 9, 4, 7, 5, 0, 6};
+    cout << findMissing(set1) << endl;
+    cout << findMissing(set2);
+
+    return 0;
+}
+```
 ### Task 3
 
 ### Task 4
